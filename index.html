@@ -2,24 +2,26 @@
 <html>
   <head>
     <link href="styles/style.css" rel="stylesheet">
-    <meta charset="utf-8">
+    <!-- <link href="styles/energyUsage.css" rel="stylesheet"> -->
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- <meta charset="utf-8"> -->
     <script src="src/thermostat.js"></script>
+    <script src="src/interface.js"></script>
     <title> WELCOME TO THE !NEST THERMOSTAT </title>
 
     <script type="text/javascript">
-
       function picture(){ 
       var pic = "https://media3.giphy.com/media/rQ9ep0stA0oRG/giphy.gif?cid=ecf05e4702effe41b5bc778da8ae819d1bf820a6e408e90c&rid=giphy.gif"
       document.getElementById('chicken').style.display='block';
       }
-
-
-  </script>
-    <style>
+    </script>
+    <!-- <style>
       a.test {
           font-weight: bold;
       }
-      </style>
+      </style> -->
   </head>
 
 <section>
@@ -30,19 +32,21 @@
   
 
 <nav>
-  <button name="temp_up">Turn up the HEAT!</button>
-  <br><button name="temp_down">Turn it down!!!</button>
-  <br><button name="reset">reset</button>
+  <p>
+  <button id="temp_up">+</button>
+  <button id="temp_down">-</button>
+  <button id="reset">reset</button>
   <!-- <br><button name="pwr_saving" onclick="picture()">Save the planet</button> -->
-  <br>Power Saving Mode <label class="switch">
-    <input type="checkbox" name="pwr_saving" onclick="picture()">
+  Power Saving Mode  <label class="switch">
+    <input type="checkbox" id="pwr_saving" onclick="picture()">
     <span class="slider round"></span>
   </label>
+  </p>
 </nav>
 
 <body>
 
-  <a href="http://jquery.com/">jQuery</a>
+  <!-- <a href="http://jquery.com/">jQuery</a>
   <script src="jquery.js"></script>
 
   <script>
@@ -50,38 +54,38 @@
   window.onload = function() {
   alert( "welcome" );
   };
-
   $( document ).ready(function() {
- 
     $( "a" ).click(function( event ) {
- 
       alert( "As you can see, the link no longer took you to jquery.com" );
       event.preventDefault();
-
     });
-
   });
   $( "a" ).click(function( event ) {
- 
     event.preventDefault();
-
     $( this ).hide( "slow" );
-
   });
 
-  </script>
+  </script> -->
 
 
 
+<section>
+  <h1>Current temperature: <span id="current-temperature">20</span></h1>
+  <select id="current-city">
+    <option value="london">London</option>
+    <option value="newyork">New York</option>
+    <option value="paris">Paris</option>
+    <option value="tokyo">Tokyo</option>
+  </select>
+</section>
+  
 
-  <div id="temperature"></div>
-
-<br>temperature display (ideas: FLASHING EVERYWHERE, change the colour of the page based on the temp, CRAZY GIFS)
+<!-- <br>temperature display (ideas: FLASHING EVERYWHERE, change the colour of the page based on the temp, CRAZY GIFS)
 usage indicator
 up button
 down button
 reset
-power saving on/off
+power saving on/off -->
 
 <img id="chicken" src="https://media3.giphy.com/media/rQ9ep0stA0oRG/giphy.gif?cid=ecf05e4702effe41b5bc778da8ae819d1bf820a6e408e90c&rid=giphy.gif" style="display:none;"/>
 
@@ -89,6 +93,6 @@ power saving on/off
 
 </section>
 <footer>
-  
+  <h1 id="temperature"></h1>
 </footer>
 </html>

@@ -1,6 +1,9 @@
 html {
-font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: 'Roboto', sans-serif;
+  
+  
 }
+
 /* Style the header */
 header {
   background-color: #666;
@@ -42,6 +45,17 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+}
+.low-usage {
+  color: green;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: red;
 }
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
@@ -118,3 +132,4 @@ input:checked + .slider:before {
 -webkit-background-clip: text;  
 -webkit-text-fill-color: transparent;
 }
+
